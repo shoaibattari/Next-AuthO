@@ -12,6 +12,7 @@ export default withPageAuthRequired(function Profile({
   if (isLoading) {
     return <Loading />;
   }
+  if (error) return <div>{error.message}</div>;
   {
     return (
       <div>

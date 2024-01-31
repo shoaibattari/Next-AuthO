@@ -1,38 +1,20 @@
-"use client";
 import Link from "next/link";
-import { useUser, UserProfile } from "@auth0/nextjs-auth0/client";
-import Loading from "./Component/Loading";
 import Button from "./Component/Button";
 
 export default function Home() {
-  const { user, error, isLoading } = useUser();
-
-  if (isLoading) return <Loading />;
-  if (error) return <div>{error.message}</div>;
-  if (!user)
-    return (
-      <div>
+  return (
+    <div className="flex gap-20">
+      <div className="hover:scale-105 ">
         <Link href={"/api/auth/login"}>
           <Button text="Login" />
         </Link>
       </div>
-    );
-
-  return (
-    user && (
-      <div className="flex">
-        <img src={user.picture} alt={user.name} width={200} />
-        <div className="grid p-4 text-3xl">
-          <h2 className=" font-extrabold ">WellCome! {user.name}</h2>
-          <p className=" font-extrabold">{user.email}</p>
-          <div className=" text-center ">
-            <Link href={"/api/auth/logout"}>
-              <Button text="Logout" />
-            </Link>
-          </div>
-        </div>
+      <div className="hover:scale-105">
+        <Link href={"/api/auth/signup"}>
+          <Button text="SignUp" />
+        </Link>
       </div>
-    )
+    </div>
   );
 }
 
