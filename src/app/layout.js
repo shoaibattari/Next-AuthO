@@ -5,7 +5,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <UserProvider>
-        <body className="grid h-screen place-items-center">{children}</body>
+        <body className="grid grid-rows-4 items-center bg-gray-900 ">{children}</body>
       </UserProvider>
     </html>
   );

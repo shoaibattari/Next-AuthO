@@ -1,4 +1,4 @@
-import { handleAuth, handleLogin } from "@auth0/nextjs-auth0";
+import { handleAuth, handleLogin, } from "@auth0/nextjs-auth0";
 
 export const GET = handleAuth({
   login: handleLogin({
@@ -10,4 +10,4 @@ export const GET = handleAuth({
     },
     returnTo: "/user",
   }),
-}); 
+});
