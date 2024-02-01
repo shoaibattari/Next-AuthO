@@ -5,7 +5,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <UserProvider>
-        <body className="grid grid-rows-4 items-center bg-gray-900 ">{children}</body>
+        <body className="grid grid-rows-2 md:grid-rows-3 items-center  bg-gray-900 ">
+          {children}
+        </body>
       </UserProvider>
     </html>
   );
