@@ -8,7 +8,7 @@ export default withPageAuthRequired(
     return (
       <main className="mt-10">
         <div className="mt-10">
-          <div className="text-5xl font-extrabold text-center">
+          <div className="text-3xl text-center md:text-6xl font-extrabold  text-teal-200">
             <h1>User Profile Page</h1>
           </div>
 
@@ -19,14 +19,14 @@ export default withPageAuthRequired(
               width={75}
               className="inline-block  rounded-full ring-2 ring-white"
             />
-            <div className="grid p-4 text-3xl">
+            <div className="grid p-4 text-3xl text-teal-200">
               <h2 className=" font-extrabold ">{user.name}</h2>
             </div>
           </div>
         </div>
 
-        <div>
-          <dl>
+        <div className=" flex justify-center">
+          <dl >
             <div className="bg-gray-900 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6 mt-1">
               <dt className="text-lg md:text-2xl font-bold text-white">
                 Name:
@@ -55,9 +55,9 @@ export default withPageAuthRequired(
             </div>
           </dl>
         </div>
-        <div className=" text-center mt-2 ">
+        <div className=" text-center mt-2 text-2  xl ">
           <Link href={"/user"}>
-            <Button text="back" />
+            <Button text="BACK" />
           </Link>
         </div>
       </main>
